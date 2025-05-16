@@ -50,5 +50,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 # MIT License
 
-Copyright (c) 2021 Luke Yoshioka
+Copyright (c) 2021 Luke Yoshioka\
 Modified by 2025 [JungHo-K1m]
