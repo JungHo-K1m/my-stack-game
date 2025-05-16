@@ -6,6 +6,7 @@ import {
 import { BLOCK, cutBlock, generateBase } from '../lib/block'
 import { loadLights, loadScene } from '../lib/canvas'
 import { addLayer, addOverhang, overhangs, stack } from '../lib/stack'
+import { useGameStore } from '../store/useGameStore'
 
 let gameStarted = false
 let gameOver = false
@@ -59,8 +60,8 @@ const animation = () => {
     world.remove(topLayer.body)
     scene.remove(topLayer.block)
     gameStarted = false
-    document.querySelector('#gameover').style.display = 'flex'
     gameOver = true
+    useGameStore.getState().setGameOver()
   }
 
   if (camera.position.y < BLOCK.HEIGHT * (stack.length - 2) + 4) {
@@ -141,8 +142,8 @@ export const gameLoop = () => {
       )
       world.remove(topLayer.body)
       scene.remove(topLayer.block)
-      document.querySelector('#gameover').style.display = 'flex'
       gameOver = true
+      useGameStore.getState().setGameOver()
     }
   }
 }
