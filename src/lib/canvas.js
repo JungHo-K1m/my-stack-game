@@ -1,3 +1,4 @@
+//src/lib/canvas.js
 import {
   Scene,
   Color,

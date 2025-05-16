@@ -1,18 +1,15 @@
+// src/App.jsx
 import React from 'react'
-import CanvasContainer from './components/CanvasContainer'
-import GameOver from './components/GameOver'
-import Instructions from './components/Instructions'
-import Score from './components/Score'
+import { Routes, Route } from 'react-router-dom'
+import GamePage from './pages/GamePage'
+import RankingPage from './pages/RankingPage'
 
 function App() {
-
   return (
-    <div className="App">
-      <Instructions />
-      <GameOver />
-      <Score />
-      <CanvasContainer />
-    </div>
+    <Routes>
+      <Route path="/" element={<GamePage />} />
+      <Route path="/ranking" element={<RankingPage />} />
+    </Routes>
   )
 }
 

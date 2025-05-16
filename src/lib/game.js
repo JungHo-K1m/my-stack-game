@@ -1,3 +1,4 @@
+//src/lib/game.js
 import {
   World,
   NaiveBroadphase

@@ -1,3 +1,4 @@
+//src/lib/block.js
 import {
   BoxGeometry,
   Color,

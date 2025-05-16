@@ -1,3 +1,4 @@
+//src/lib/stack.js
 import { BLOCK, generateBlock } from "./block"
 
 export let stack = []
